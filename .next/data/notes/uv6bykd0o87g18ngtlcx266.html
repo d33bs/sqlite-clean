@@ -1,0 +1,12 @@
+<h1 id="development"><a aria-hidden="true" class="anchor-heading" href="#development"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Development</h1>
+<p>Development installation: Please use Python <a href="https://python-poetry.org/"><code>poetry</code></a> to run and install this tool for development.</p>
+<p>Development is assisted by procedures using <a href="https://dagger.io">Dagger</a> via the <code>project.cue</code> file within this repo. These are also related to checks which are performed related to CI/CD. See the following page for more information on installing Dagger: <a href="https://docs.dagger.io/install">https://docs.dagger.io/install</a></p>
+<p>Afterwards, use the following commands within the project directory to perform various checks. Warnings or errors should show the related file and relevant text from the related tool which may need to be addressed.</p>
+<pre class="language-shell"><code class="language-shell"><span class="token comment"># clean various files using formatting standards</span>
+dagger <span class="token keyword">do</span> clean
+<span class="token comment"># lint the files for formatting or other issues</span>
+dagger <span class="token keyword">do</span> lint
+<span class="token comment"># perform testing on the files</span>
+dagger <span class="token keyword">do</span> <span class="token builtin class-name">test</span>
+<span class="token punctuation">..</span>.
+</code></pre>

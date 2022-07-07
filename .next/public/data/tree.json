@@ -1,0 +1,38 @@
+{
+  "roots": [
+    {
+      "key": "lc134w4qevoeo7r73bz1ldv",
+      "title": "Sqlite-clean Docs",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "docs",
+      "navExclude": false,
+      "children": [
+        {
+          "key": "uv6bykd0o87g18ngtlcx266",
+          "title": "Development",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "docs",
+          "navExclude": false,
+          "children": []
+        },
+        {
+          "key": "vayg4033epg7u4oit71kuxr",
+          "title": "Install",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "docs",
+          "navExclude": false,
+          "children": []
+        }
+      ]
+    }
+  ],
+  "child2parent": {
+    "403": null,
+    "lc134w4qevoeo7r73bz1ldv": null,
+    "vayg4033epg7u4oit71kuxr": "lc134w4qevoeo7r73bz1ldv",
+    "uv6bykd0o87g18ngtlcx266": "lc134w4qevoeo7r73bz1ldv"
+  }
+}
