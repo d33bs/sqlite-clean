@@ -42,22 +42,19 @@
 <dd><p>Collect a list of columns from the given engine’s
 database using optional table or column level
 specification.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>sql_engine</strong> (<em>str</em><em> | </em><em>sqlalchemy.engine.base.Engine</em>) – filename of the SQLite database or existing sqlalchemy engine</p></li>
-<li><p><strong>table_name</strong> (<em>str</em>) – optional specific table name to check within database, by default None</p></li>
-<li><p><strong>column_name</strong> (<em>str</em>) – optional specific column name to check within database, by default None</p></li>
-</ul>
+<dl class="simple">
+<dt>sql_engine: str | sqlalchemy.engine.base.Engine</dt><dd><p>filename of the SQLite database or existing sqlalchemy engine</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Returns list, and if populated, contains tuples with values
+<dt>table_name: str</dt><dd><p>optional specific table name to check within database, by default None</p>
+</dd>
+<dt>column_name: str</dt><dd><p>optional specific column name to check within database, by default None</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>list</dt><dd><p>Returns list, and if populated, contains tuples with values
 similar to the following. These may also be accessed by name
 similar to dictionaries, as they are SQLAlchemy Row objects.
 [(‘table_name’, ‘column_name’, ‘column_type’, ‘notnull’),…]</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>list</p>
 </dd>
 </dl>
 </dd></dl>
@@ -67,15 +64,12 @@ similar to dictionaries, as they are SQLAlchemy Row objects.
 <span class="sig-prename descclassname"><span class="pre">sqlite_clean.utils.</span></span><span class="sig-name descname"><span class="pre">engine_from_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sql_engine</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Engine</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Engine</span></span></span><a class="headerlink" href="#sqlite_clean.utils.engine_from_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Helper function to create engine from a string or return the engine
 if it’s already been created.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>sql_engine</strong> (<em>str</em><em> | </em><em>sqlalchemy.engine.base.Engine</em>) – filename of the SQLite database or existing sqlalchemy engine</p>
+<dl class="simple">
+<dt>sql_engine: str | sqlalchemy.engine.base.Engine</dt><dd><p>filename of the SQLite database or existing sqlalchemy engine</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A SQLAlchemy engine</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>sqlalchemy.engine.base.Engine</p>
+</dl>
+<dl class="simple">
+<dt>sqlalchemy.engine.base.Engine</dt><dd><p>A SQLAlchemy engine</p>
 </dd>
 </dl>
 </dd></dl>
@@ -104,6 +98,7 @@ if it’s already been created.</p>
 <li class="toctree-l1"><a class="reference internal" href="install.html">install</a></li>
 <li class="toctree-l1"><a class="reference internal" href="develop.html">develop</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="catalog.html">catalog</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lint.html">lint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fix.html">fix</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">utils</a></li>

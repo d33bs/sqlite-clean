@@ -17,7 +17,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="fix" href="fix.html" />
-    <link rel="prev" title="modules" href="modules.html" />
+    <link rel="prev" title="catalog" href="catalog.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -45,20 +45,17 @@ entire SQLite database, a specific table, or a specific column
 within a specific table. See the following for more details on
 affinity vs storage class typing within SQLite:
 <a class="reference external" href="https://www.sqlite.org/datatype3.html">https://www.sqlite.org/datatype3.html</a></p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>sql_engine</strong> (<em>str</em><em> | </em><em>sqlalchemy.engine.base.Engine</em>) – filename of the SQLite database or existing sqlalchemy engine</p></li>
-<li><p><strong>table_name</strong> (<em>str</em>) – optional specific table name to check within database, by default None</p></li>
-<li><p><strong>column_name</strong> (<em>str</em>) – optional specific column name to check within database, by default None</p></li>
-</ul>
+<dl class="simple">
+<dt>sql_engine: str | sqlalchemy.engine.base.Engine</dt><dd><p>filename of the SQLite database or existing sqlalchemy engine</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Returns True if conflicting storage class values were detected
+<dt>table_name: str</dt><dd><p>optional specific table name to check within database, by default None</p>
+</dd>
+<dt>column_name: str</dt><dd><p>optional specific column name to check within database, by default None</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>bool</dt><dd><p>Returns True if conflicting storage class values were detected
 in database provided, else returns False.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
 </dd></dl>
@@ -70,20 +67,18 @@ in database provided, else returns False.</p>
 a string value which is similar to NULL. Strings instead of
 SQLite NULL may be interpreted at read as a string (value)
 instead of a NULL (non-value).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>sql_engine</strong> (<em>str</em><em> | </em><em>sqlalchemy.engine.base.Engine</em>) – filename of the SQLite database or existing sqlalchemy engine</p></li>
-<li><p><strong>table_name</strong> (<em>str</em>) – optional specific table name to check within database, by default None</p></li>
-<li><p><strong>column_name</strong> (<em>str</em>) – optional specific column name to check within database, by default None</p></li>
-<li><p><strong>like_nulls</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – tuple strings which may represent null values, by default LIKE_NULLS global</p></li>
-</ul>
+<dl class="simple">
+<dt>sql_engine: str | sqlalchemy.engine.base.Engine</dt><dd><p>filename of the SQLite database or existing sqlalchemy engine</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Returns True if found a str value similar to null, else returns False.</p>
+<dt>table_name: str</dt><dd><p>optional specific table name to check within database, by default None</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>bool</p>
+<dt>column_name: str</dt><dd><p>optional specific column name to check within database, by default None</p>
+</dd>
+<dt>like_nulls: List[str]</dt><dd><p>tuple strings which may represent null values, by default LIKE_NULLS global</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>bool</dt><dd><p>Returns True if found a str value similar to null, else returns False.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -112,6 +107,7 @@ instead of a NULL (non-value).</p>
 <li class="toctree-l1"><a class="reference internal" href="install.html">install</a></li>
 <li class="toctree-l1"><a class="reference internal" href="develop.html">develop</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="catalog.html">catalog</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">lint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fix.html">fix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="utils.html">utils</a></li>
@@ -124,7 +120,7 @@ instead of a NULL (non-value).</p>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
   <li><a href="modules.html">modules</a><ul>
-      <li>Previous: <a href="modules.html" title="previous chapter">modules</a></li>
+      <li>Previous: <a href="catalog.html" title="previous chapter">catalog</a></li>
       <li>Next: <a href="fix.html" title="next chapter">fix</a></li>
   </ul></li>
   </ul></li>
