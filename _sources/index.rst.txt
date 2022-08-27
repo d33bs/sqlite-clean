@@ -21,6 +21,7 @@ By default, "linting" actions are taken unless otherwise specifying flags associ
    :caption: Contents:
 
    install
+   commands
    develop
    modules
 
