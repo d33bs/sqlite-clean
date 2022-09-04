@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sqlite-clean"
-version = "0.0.3"
+version = "0.0.4"
 description = "A SQLite data validation and cleanup tool."
 authors = ["d33bs <dave.bunten@cuanschutz.edu>"]
 license = "Apache-2.0"
