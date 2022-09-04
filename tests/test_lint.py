@@ -6,7 +6,9 @@ from sqlite_clean.lint import (
 )
 
 
-def test_contains_conflicting_aff_storage_class(database_engine_for_testing):
+def test_contains_conflicting_aff_storage_class(
+    database_engine_for_testing, err_database_engine_for_testing
+):
     """
     Testing contains_conflicting_aff_storage_class
     """
@@ -79,6 +81,16 @@ def test_contains_conflicting_aff_storage_class(database_engine_for_testing):
             sql_engine=database_engine_for_testing,
             table_name="tbl_a",
             column_name="col_text",
+        )
+        is False
+    )
+
+    # test passing non-existent column affinity type (unable to validated for storage classes)
+    assert (
+        contains_conflicting_aff_storage_class(
+            sql_engine=err_database_engine_for_testing,
+            table_name="tbl_a",
+            column_name="col_nonexistent",
         )
         is False
     )

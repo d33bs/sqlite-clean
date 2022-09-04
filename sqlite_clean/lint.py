@@ -64,9 +64,29 @@ def contains_conflicting_aff_storage_class(
     with engine.connect() as connection:
         for col in columns:
 
+            if col["column_type"] in SQLITE_AFF_REF:
+                root_coltype = col["column_type"]
+            elif col["column_type"] in [
+                item for chunk in SQLITE_AFF_REF.values() for item in chunk
+            ]:
+                root_coltype = list(
+                    {
+                        key: chunk
+                        for key, chunk in SQLITE_AFF_REF.items()
+                        for item in chunk
+                        if item == col["column_type"]
+                    }.keys()
+                )[0]
+            else:
+                logger.warning(
+                    "Unable to find related column affinity for column of type %s.",
+                    col["column_type"],
+                )
+                continue
+
             # join formatted string for use with sql query in {col_types} var
             col_types = ",".join(
-                [f"'{x.lower()}'" for x in SQLITE_AFF_REF[col["column_type"]]]
+                [f"'{x.lower()}'" for x in SQLITE_AFF_REF[root_coltype]]
             )
 
             # there are challenges with using sqlalchemy vars in the same manner as above
